@@ -1,0 +1,89 @@
+<%- include('../views/UI/header.ejs') %>
+<title>Update Account</title>
+
+<div class="card size-full m-4 bg-base-300 shadow-xl mt-4">
+  <div class="card-body">
+    <h2 class="font-bold text-center text-3xl mb-2">Update your Account</h2>
+    <div class="grid grid-cols-12 gap-4">
+
+      <!-- Column -->
+      <div class="col-span-12 md:col-span-6">
+        <div class="mb-2">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username:</label>
+          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="joaquin3321@gmail.com" />
+        </div>
+        <div class="mb-2">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:</label>
+          <input type="text" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="Joaquin M. Megio" />
+        </div>
+        <div class="">
+          <div class="mb-2">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Department:</label>
+            <select class="select select-bordered w-full">
+              <option disabled selected>--Select Department--</option>
+              <option selected>IT Department</option>
+              <option>Admin Office</option>
+              <option>GSO Office</option>
+              <option>HR Department</option>
+              <option>Office of Treasury</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column -->
+      <div class="col-span-12 md:col-span-6">
+
+        <div class="mb-2">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password:</label>
+          <input type="password" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Password..." />
+        </div>
+        <div class="mb-2">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password:</label>
+          <input type="password" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Confirm Password..." />
+        </div>
+        <div class="flex items-center mb-2">
+          <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Show Password</label>
+        </div>
+
+      </div>
+
+    </div>
+    <hr>
+    <div class="flex flex-nowrap gap-2">
+      <button class="btn w-32 btn-success" onclick="RegisterButton()">Update Account</button>
+      <button class="btn w-32 btn-ghost" onclick="cancelButton()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function RegisterButton() {
+    Swal.fire({
+      title: "Update your account?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#198754",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, update it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Account Updated Successfully!",
+          // text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+  }
+
+  function cancelButton() {
+    Swal.fire({
+      title: "Cancel Update!",
+      icon: "success"
+    });
+  }
+</script>
+
+<%- include('../views/UI/footer.ejs') %>

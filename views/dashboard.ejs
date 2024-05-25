@@ -1,0 +1,141 @@
+<%- include('../views/UI/header.ejs') %>
+<title>Dashboard</title>
+
+<div class="w-80 max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mt-4 mr-4 ml-4">
+  <div class="flow-root">
+    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+      <li class="py-3 sm:py-4">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <img class="w-14 h-14 rounded-full" src="/public/images/pending-approval.png" alt="Neil image">
+          </div>
+          <div class="flex-1 min-w-0 ms-4 ">
+            <p class=" font-medium text-2xl text-gray-900 truncate dark:text-white">
+              Pending:
+            </p>
+          </div>
+          <div class="inline-flex items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            1 / 2
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="w-80 max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mt-4  mr-4 ml-4">
+  <div class="flow-root">
+    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+      <li class="py-3 sm:py-4">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <img class="w-14 h-14 rounded-full" src="/public/images/received.jpg" alt="Neil image">
+          </div>
+          <div class="flex-1 min-w-0 ms-4 ">
+            <p class=" font-medium text-2xl text-gray-900 truncate dark:text-white">
+              Received:
+            </p>
+          </div>
+          <div class="inline-flex items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            1 / 2
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="card size-11/12 m-4 bg-base-300 shadow-xl mt-4">
+  <div class="card-body">
+    <h2 class="font-bold text-center text-3xl mb-2">Create Form</h2>
+    <div class="grid grid-cols-12 gap-4">
+
+      <!-- Column -->
+      <div class="col-span-12 md:col-span-6">
+        <div class="mb-2">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Who Created The From:</label>
+          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="Joaquin M. Megio" disabled />
+        </div>
+        <div class="">
+          <div class="mb-2">
+            <labe class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From Departmet of :</labe>
+            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="IT Department" disabled />
+          </div>
+        </div>
+        <div class="mb-2">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Details:</label>
+          <textarea class="textarea bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows="4" placeholder="Details of the Form"></textarea>
+        </div>
+
+      </div>
+
+      <!-- Column -->
+      <div class="col-span-12 md:col-span-6">
+        <div class="mb-2">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Serial Number:</label>
+          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="This is Auto Generated" disabled />
+        </div>
+        <div class="mb-2">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">To:</label>
+          <div class="flex items-center mb-2">
+            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select All</label>
+          </div>
+          <div class="flex items-center ml-6 mb-2">
+            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Admin Office</label>
+          </div>
+          <div class="flex items-center ml-6 mb-2">
+            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">GSO Office</label>
+          </div>
+          <div class="flex items-center ml-6 mb-2">
+            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">HR Department</label>
+          </div>
+          <div class="flex items-center ml-6 mb-2">
+            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">CCIS Department</label>
+          </div>
+        </div>
+        <div class="mb-2">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Letter Request:</label>
+          <input type="file" class="file-input file-input-bordered w-full" />
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <div class="flex flex-nowrap gap-2">
+      <button class="btn w-32 btn-success" onclick="SubmitButton()">Submit</button>
+      <button class="btn w-32 btn-ghost">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function SubmitButton() {
+    Swal.fire({
+      title: "Create the form?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#198754",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, create it!",
+      backdrop: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          backdrop: false,
+          title: "Form Created Successfully!",
+          // text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+  }
+</script>
+
+<%- include('../views/UI/footer.ejs') %>

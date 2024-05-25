@@ -1,0 +1,93 @@
+</div>
+<!-- Layout End here -->
+</div>
+<div class="drawer-side">
+  <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+
+  <ul class="menu min-h-full bg-base-300 w-64">
+
+    <div class="avatar place-content-center">
+      <div class="w-40 rounded mb-3">
+        <img src="/public/images/Logo.png" />
+      </div>
+    </div>
+    <div class="font-bold text-center mb-4">
+      <div class="text-xl">
+        IT Department
+      </div>
+    </div>
+
+    <li class="text-base font-semibold mb-2"><a href="/" ><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+    <li class="text-base font-semibold mb-2">
+      <details open>
+        <summary><i class="fa-solid fa-folder"></i> Documents</summary>
+        <ul>
+          <li class=""><a href="/pending"><i class="fa-solid fa-file"></i> Pending Form</a></li>
+          <li class=""><a href="/receive"><i class="fa-solid fa-file"></i> To Receive Document</a></li>
+          <li class=""><a href="/alreadyReceived"><i class="fa-solid fa-file"></i> Already Received</a></li>
+          <li class=""><a href="/allForms"><i class="fa-solid fa-file"></i> All Form</a></li>
+        </ul>
+      </details>
+    </li>
+    <li class="text-base font-semibold mb-2">
+      <details open>
+        <summary><i class='bx bx-user icon'></i> Users</summary>
+        <ul>
+          <li><a href="/userList"><i class='bx bxs-user-detail'></i> Users List</a></li>
+          <li><a href="/createUser"><i class='bx bx-user-plus'></i> Create Account</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</div>
+</div>
+
+<script>
+  const activePage = window.location.pathname;
+  const navLinks = document.querySelectorAll('ul a');
+
+
+
+  navLinks.forEach(link => {
+    const linkPath = new URL(link.pathname, window.location.origin).pathname; // Extract and normalize pathname
+    console.log(linkPath)
+    // Add conditions to exclude specific links, such as the one with the dropdown
+    const isExcludedLink = link.classList.contains('with-design') && link.getAttribute('data-bs-toggle') === 'dropdown';
+
+    if (activePage === "/" && link.getAttribute('href') === '/') {
+      link.classList.add('active');
+    }
+
+    if (activePage === "/pending" && link.getAttribute('href') === '/pending') {
+      link.classList.add('active');
+    }
+
+    if (activePage === "/receive" && link.getAttribute('href') === '/receive') {
+      link.classList.add('active');
+    }
+
+    if (activePage === "/alreadyReceived" && link.getAttribute('href') === '/alreadyReceived') {
+      link.classList.add('active');
+    }
+
+    if (activePage === "/allForms" && link.getAttribute('href') === '/allForms') {
+      link.classList.add('active');
+    }
+
+    if (activePage === "/userList" && link.getAttribute('href') === '/userList') {
+      link.classList.add('active');
+    }
+
+    if (activePage === "/createUser" && link.getAttribute('href') === '/createUser') {
+      link.classList.add('active');
+    }
+
+  });
+</script>
+
+<!-- <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.0.5/js/dataTables.tailwindcss.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
