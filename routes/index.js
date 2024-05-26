@@ -46,6 +46,10 @@ router.get('/login', function(req, res, next) {
   res.render('loginPage');
 });
 
+router.get('/logout', function(req, res, next) {
+  res.render('logout');
+});
+
 
 
 module.exports = router;

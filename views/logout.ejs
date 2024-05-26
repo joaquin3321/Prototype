@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log Out</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="flex flex-wrap items-center justify-center">
+    <div class="card size-11/12 m-4 bg-base-300 shadow-xl">
+      <div class="card-body">
+        <div class="text-center font-bold">
+          <p style="font-size: 100px;">BALIK KANA MISS NA KITA!</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center">
+          <img style="height: 300px" src="/public/images/cat.jpg" alt="">
+          <img style="height: 300px" src="/public/images/cat2.webp" alt="">
+          <img style="height: 300px" src="/public/images/cat3.gif" alt="">
+        </div>
+          <audio id="myAudio" controls autoplay muted>
+            <source src="/public/images/Silent Sanctuary - Bumalik Ka Na Sa'kin (Official Lyric Video) (mp3cut.net).mp3" type="audio/mpeg">
+          </audio>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('myAudio');
+      audio.muted = false; // Unmute the audio after the page has loaded
+    });
+  </script>
+</body>
+
+</html>

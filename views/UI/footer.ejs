@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <li class="text-base font-semibold mb-2"><a href="/" ><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+    <li class="text-base font-semibold mb-2"><a href="/"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
     <li class="text-base font-semibold mb-2">
       <details open>
         <summary><i class="fa-solid fa-folder"></i> Documents</summary>
@@ -83,6 +83,38 @@
     }
 
   });
+</script>
+
+<script>
+  function togglePasswordVisibility() {
+    var checkbox = document.getElementById("seePassword");
+    var passwordInput = document.getElementById("userPass");
+    var password2Input = document.getElementById("userPass2");
+
+    var showPassword = checkbox.checked;
+
+    passwordInput.type = checkbox.checked ? "text" : "password";
+    password2Input.type = checkbox.checked ? "text" : "password";
+  }
+
+  function checkPasswordMatch() {
+    var userPass = document.getElementById("userPass").value;
+    var userPass2 = document.getElementById("userPass2").value;
+    var message = document.getElementById("passwordMatchMessage");
+
+    if (userPass === userPass2) {
+      message.style.color = "green";
+      message.innerHTML = "* Passwords match!";
+    } else {
+      message.style.color = "red";
+      message.innerHTML = "* Passwords do not match.";
+    }
+    if (!userPass && !userPass2) {
+      message.style.display = "none"
+    } else {
+      message.style.display = "block"
+    }
+  }
 </script>
 
 <!-- <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>

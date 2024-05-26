@@ -93,7 +93,7 @@
         </div>
         <div class="mb-2">
           <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Details:</label>
-          <textarea class="text-base bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows="4" placeholder="Details of the Form" disabled >Request Speaker and Monoblock</textarea>
+          <textarea class="text-base bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows="4" placeholder="Details of the Form" disabled>Request Speaker and Monoblock</textarea>
         </div>
         <div class="mb-2">
           <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Request Letter:</label>
@@ -143,7 +143,7 @@
         </div>
         <div class="mb-2">
           <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Note/Remarks :</label>
-          <textarea class="text-base bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows="4" placeholder="Receive Note/Remarks" disabled>What you are requesting is avaiable.</textarea>
+          <textarea class="text-base bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows="4" placeholder="Receive Note/Remarks">What you are requesting is avaiable.</textarea>
         </div>
       </div>
 
@@ -170,6 +170,29 @@
     </div>
   </div>
 </div>
+
+<script>
+  function editButton() {
+    Swal.fire({
+      title: "Update Response?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#198754",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Update it!",
+      // backdrop: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          // backdrop: false,
+          title: "Response Updated Successfully!",
+          // text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+  }
+</script>
 
 
 <%- include('../views/UI/footer.ejs') %>
