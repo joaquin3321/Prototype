@@ -55,7 +55,7 @@
     <hr>
     <div class="flex flex-nowrap gap-2">
       <button class="btn w-32 btn-success" onclick="RegisterButton()">Register Account</button>
-      <button class="btn w-32 btn-ghost">Cancel</button>
+      <button class="btn w-32 btn-ghost" onclick="cancelButton()">Cancel</button>
     </div>
   </div>
 </div>
@@ -77,6 +77,13 @@
           icon: "success"
         });
       }
+    });
+  }
+  function cancelButton() {
+    Swal.fire({
+      title: "Cancel Update!",
+      icon: "success",
+      backdrop: false,
     });
   }
 </script>
